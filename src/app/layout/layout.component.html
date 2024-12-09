@@ -1,0 +1,59 @@
+<nz-layout>
+  <!-- Sider -->
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" nzTheme="dark" [nzWidth]="260">
+
+    <div style="font-weight: 700; color: white; font-size: 30px;">
+      <img style="width: 150px;" src="/assets/images1.png"> Admin
+    </div>
+
+      <ul nz-menu nzTheme="dark" nzMode="inline">
+
+          <li nz-submenu nzTitle="Người dùng" nzIcon="user">
+            
+              <ul>
+                  <li nz-menu-item routerLink="">Tài khoản</li>
+                  <li nz-menu-item routerLink="">Loại tài khoản</li>                 
+              </ul>
+          </li>
+          <li nz-menu-item routerLink="" routerLinkActive="active">
+            <span nz-icon nzType="file"></span>
+              <span>Danh mục sản phẩm</span>
+          </li>
+          <li nz-menu-item routerLink="" routerLinkActive="active">
+              <span nz-icon nzType="file"></span>
+              <span>Sản phẩm</span>
+          </li>
+          <li nz-menu-item routerLink="" routerLinkActive="active">
+              <span nz-icon nzType="file"></span>
+              <span>Thương hiệu</span>
+          </li>
+          <li nz-menu-item routerLink="" routerLinkActive="active">
+            <span nz-icon nzType="file"></span>
+              <span>Đơn hàng</span>
+          </li>
+          <li nz-menu-item routerLink="" routerLinkActive="active">
+            <span nz-icon nzType="file"></span>
+            <span>Thống kê</span>
+          </li>
+      </ul>
+  </nz-sider>
+
+  <!-- Main Layout -->
+  <nz-layout>
+      <!-- Header -->
+      <nz-header>
+          <span class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
+              (click)="isCollapsed = !isCollapsed"></span>
+      </nz-header>
+
+      <nz-content style="height: 720px;           
+       ">
+          <router-outlet></router-outlet>
+      </nz-content>
+
+      <!-- Footer -->
+      <nz-footer style="text-align: center;">
+          Ant Design ©2020 Implemented by Angular
+      </nz-footer>
+  </nz-layout>
+</nz-layout>
