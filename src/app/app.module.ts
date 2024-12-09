@@ -4,6 +4,7 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzTableModule } from 'ng-zorro-antd/table';  
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +16,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutComponent } from './layout/layout.component';
+import { BrandComponent } from './brand/brand.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -24,6 +27,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     LayoutComponent,
+    BrandComponent,
+    ProductComponent,
    
    
   ],
@@ -36,7 +41,8 @@ registerLocaleData(en);
     NzBreadCrumbModule,
     NzMenuModule, 
     NzIconModule,
-    NzLayoutModule
+    NzLayoutModule,
+    NzTableModule,
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
