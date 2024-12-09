@@ -4,7 +4,7 @@ import { NzBreadCrumbModule } from 'ng-zorro-antd/breadcrumb';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
-
+import {  ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
@@ -15,6 +15,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutComponent } from './layout/layout.component';
+import { NzPopconfirmModule } from 'ng-zorro-antd/popconfirm';
+import { NzTableModule } from 'ng-zorro-antd/table';
+import { NzInputModule } from 'ng-zorro-antd/input';
+import { NzButtonModule } from 'ng-zorro-antd/button';
 
 
 
@@ -34,9 +38,15 @@ registerLocaleData(en);
     HttpClientModule,
     BrowserAnimationsModule,
     NzBreadCrumbModule,
-    NzMenuModule, 
     NzIconModule,
-    NzLayoutModule
+    NzInputModule,
+    NzButtonModule, 
+    NzMenuModule, 
+    NzLayoutModule,
+    NzPopconfirmModule,
+    ReactiveFormsModule,
+    NzTableModule,
+
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
